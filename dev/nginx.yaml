@@ -1,0 +1,14 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-project
+  namespace: dev
+spec:
+  replicas: 4
+  selector:
+    matchLabels:
+      app: nginx-project
+  template:
+    metadata:
+      labels:
+        app: nginx-project-dev
